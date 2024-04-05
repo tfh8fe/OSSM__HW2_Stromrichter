@@ -24,14 +24,14 @@ I_NRMS = 30
 
 def test_calc_norm_u_dc():
     assert M3_Stromrichter.calc_norm_u_dc(3) == round(3 * np.sqrt(3) / (2*np.pi),3)
-    assert M3_Stromrichter.calc_norm_u_dc(2) == round(2 / np.pi, 2)
+    assert M3_Stromrichter.calc_norm_u_dc(2) == round(2 / np.pi, 3)
     
 def test_calc_ue():
     assert M3_Stromrichter.calc_ue(400, factor, alpha_max) == 1.758
     assert M3_Stromrichter.calc_ue(120, factor, alpha_max) == 0.528
 
 def test_calc_alpha():
-    assert M3_Stromrichter.calc_alpha(400, factor, 1.758, 150) == 124.31
+    assert M3_Stromrichter.calc_alpha(400, factor, 1.758, 150) == 124.311
     assert M3_Stromrichter.calc_alpha(400, factor, 1.758, 180) == 132.564
 
 def test_calc_I_NRMS():
