@@ -22,6 +22,7 @@ factor = 3 * np.sqrt(3) / (2 * np.pi)
 ue = 1.758
 I_NRMS = 30
 
+
 def test_calc_norm_u_dc():
     assert M3_Stromrichter.calc_norm_u_dc(3) == round(3 * np.sqrt(3) / (2 * np.pi), 3)
     assert M3_Stromrichter.calc_norm_u_dc(2) == round(2 / np.pi, 3)
@@ -45,4 +46,3 @@ def test_calc_I_NRMS():
 def test_calc_lambda():
     assert M3_Stromrichter.calc_lambda(I_P, U_P, U_NRMS, 10) == 0.433
     assert M3_Stromrichter.calc_lambda(I_P, U_P, U_NRMS, 19) == 0.228
-

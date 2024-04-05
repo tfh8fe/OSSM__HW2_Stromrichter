@@ -5,6 +5,7 @@ Created on Tue Apr  2 16:29:17 2024
 @author: tfh8fe
 
 """
+
 import numpy as np
 
 
@@ -14,6 +15,7 @@ alpha_max = 160  # °
 # Maximum Power Point (MPP)
 I_P = 20  # A
 U_P = 150  # V
+
 
 def calc_norm_u_dc(p):
     factor = p / np.pi * np.sin(np.pi / p)
@@ -36,7 +38,7 @@ def calc_alpha(U_NRMS, factor, ue, U_P):
 
 def calc_I_NRMS(I_P, ue):
     I_NRMS = I_P / ue * np.sqrt(2/3) # duty cycle 2/3 due to 
-                                     # triangle on primary side
+    # triangle on primary side
     return round(I_NRMS, 3)
 
 
@@ -56,4 +58,3 @@ print("ue: ", ue)
 print("alpha: ", alpha)
 print("I_NRMS: ", I_NRMS)
 print("LF: ", LF)
-
