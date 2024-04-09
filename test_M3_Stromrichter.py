@@ -39,7 +39,7 @@ def test_calc_alpha():
 
 
 def test_calc_I_NRMS():
-    assert M3_Stromrichter.calc_I_NRMS(20, ue) == 9.289
+    assert M3_Stromrichter.calc_I_NRMS(20, ue) == 10.289
     assert M3_Stromrichter.calc_I_NRMS(40, ue) == 18.578
 
 
