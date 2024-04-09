@@ -1,6 +1,6 @@
 # OSSM__HW2_Stromrichter
 
-[![license](https://img.shields.io/badge/license-Apache%202.0-black)](https://github.com/danielhuppmann/lecture-spring-2024/blob/main/LICENSE)
+[![license](https://img.shields.io/badge/license-Apache%202.0-black)](https://github.com/tfh8fe/OSSM__HW2_Stromrichter/blob/main/LICENSE)
 
 M3_Stromrichter.py is providing functions to calculate the most important 
 design elements of an M3 inverter for a solar energy grid feed-in. It includes
