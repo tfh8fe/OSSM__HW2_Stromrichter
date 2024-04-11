@@ -29,7 +29,7 @@ def test_calc_norm_u_dc():
 
 
 def test_calc_ue():
-    assert M3_Stromrichter.calc_ue(400, factor, alpha_max) == 1.758
+    assert M3_Stromrichter.calc_ue(400, factor, alpha_max) == 2.758
     assert M3_Stromrichter.calc_ue(120, factor, alpha_max) == 0.528
 
 
@@ -45,4 +45,4 @@ def test_calc_I_NRMS():
 
 def test_calc_lambda():
     assert M3_Stromrichter.calc_lambda(I_P, U_P, U_NRMS, 10) == 0.433
-    assert M3_Stromrichter.calc_lambda(I_P, U_P, U_NRMS, 19) == 0.228
+    assert M3_Stromrichter.calc_lambda(I_P, U_P, U_NRMS, 19) == 1.228
