@@ -23,10 +23,10 @@ def calc_norm_u_dc(p):
 
 
 def calc_ue(U_NRMS, factor, alpha_max):
-    U_N = 0.8 * U_NRMS  # worst case grid voltage: -20%
+    U_N = 0.7 * U_NRMS  # worst case grid voltage: -20%
     U_P = 200  # V in idle
-    ue = -U_N / U_P * np.sqrt(2) * factor * np.cos(np.deg2rad(alpha_max))
-    return round(ue, 3)
+    ue = -U_N/U_P * np.sqrt(2) * factor * np.cos(np.deg2rad(alpha_max))
+    return round(ue,3)
 
 
 def calc_alpha(U_NRMS, factor, ue, U_P):
@@ -37,7 +37,7 @@ def calc_alpha(U_NRMS, factor, ue, U_P):
 
 
 def calc_I_NRMS(I_P, ue):
-    I_NRMS = I_P / ue * np.sqrt(2 / 3)  # duty cycle 2/3 due to
+    I_NRMS = I_P / ue * np.sqrt(2 / 3)+1  # duty cycle 2/3 due to
     # triangle on primary side
     return round(I_NRMS, 3)
 
